@@ -3,7 +3,5 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-  'client');
   api.add_files('Meteor.Collection.prototype.Utils.js', ['client', 'server']);
-
 });
