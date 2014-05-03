@@ -3,7 +3,7 @@
   "description": "A collection of utilities added to the Meteor.Collection.prototype.",
   "homepage": "https://github.com/stephentcannon/meteor-collection-utils",
   "author": "EtherPOS (http://www.etherpos.com)",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "git": "https://github.com/stephentcannon/meteor-collection-utils",
   "packages": {}
 }

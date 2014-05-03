@@ -22,4 +22,6 @@ Collection.Utils.validateAlphaNumericOnly(name, value)
 
 Collection.Utils.validateAlphaNumericOnlyNoSpaces(name, value)
 
+Collection.Utils.validateUrl(name, value)
+
 ````
