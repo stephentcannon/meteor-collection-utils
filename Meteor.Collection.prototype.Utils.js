@@ -128,4 +128,9 @@ Meteor.Collection.prototype.Utils = {
       throw name.replace(/_/g, ' ') + ' must be a valid url.';
     }
   },
+  isNumeric: function(name, value){
+    if(isNaN(value)){
+     throw name.replace(/_/g, ' ') + ' must be a valid number.';
+    }
+  }
 };

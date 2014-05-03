@@ -8,6 +8,8 @@ usage
 ````
 Collection.Utils.isDate(obj)
 
+Collection.Utils.isNumeric(name, value)
+
 Collection.Utils.isValidDate(obj)
 
 Collection.Utils.validateParams(params)
@@ -21,6 +23,8 @@ Collection.Utils.validatePassword(password)
 Collection.Utils.validateAlphaNumericOnly(name, value)
 
 Collection.Utils.validateAlphaNumericOnlyNoSpaces(name, value)
+
+Collection.Utils.validateAlphaNumericDashUnderscoreOnlyNoSpaces(name, value)
 
 Collection.Utils.validateUrl(name, value)
 
