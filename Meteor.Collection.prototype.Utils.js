@@ -66,24 +66,24 @@ Meteor.Collection.prototype.Utils = {
     }
   },
 
-  validateEmail: function(email) { 
+  validateEmail: function(email) {
     // use either of these
     //var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
     //   /^([a-zA-Z0-9_.-\+])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/
-    //   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\  ".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA  -Z\-0-9]+\.)+[a-zA-Z]{2,}))$/  
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\  ".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA  -Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;    
+    //   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\  ".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA  -Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\  ".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA  -Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!re.test(email)){
-      throw 'Please enter a valid <b>email</b> address.'; 
+      throw 'Please enter a valid <b>email</b> address.';
     }
   },
 
   //Username
-  //Supports alphabets and numbers no special characters except underscore('_') min 3 and max 20 characters. 
+  //Supports alphabets and numbers no special characters except underscore('_') min 3 and max 20 characters.
   //var ck_username = /^[A-Za-z0-9_]{3,20}$/;
   validateUsername: function(username){
     var ck_username = /^[A-Za-z0-9._-]{3,20}$/;
     if (!ck_username.test(username)) {
-      throw 'Please enter a username 3 to 20 characters in length with no special characters except dot ("."), underscore ("_") and dash("-").'; 
+      throw 'Please enter a username 3 to 20 characters in length with no special characters except dot ("."), underscore ("_") and dash("-").';
     }
   },
   //Password
@@ -104,5 +104,14 @@ Meteor.Collection.prototype.Utils = {
       throw name.replace(/_/g, ' ') + ' must be alpha-numeric.';
     }
   },
-
+  
+  validateAlphaNumericOnlyNoSpaces: function(name, value){
+    //console.log(value);
+    var ck_alpha_numeric = /^[a-zA-Z0-9]+$/;
+    //console.log( ck_alpha_numeric.test(value) );
+    if(!ck_alpha_numeric.test(value)){
+      throw name.replace(/_/g, ' ') + ' must be alpha-numeric with no spaces.';
+    }
+  },
+  
 };

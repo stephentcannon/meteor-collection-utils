@@ -6,18 +6,20 @@ usage
 ======
 
 ````
-Collection.isDate(obj)
+Collection.Utils.isDate(obj)
 
-Collection.isValidDate(obj)
+Collection.Utils.isValidDate(obj)
 
-Collection.validateParams(params)
+Collection.Utils.validateParams(params)
 
-Collection.validateEmail(email)
+Collection.Utils.validateEmail(email)
 
-Collection.validateUsername(username)
+Collection.Utils.validateUsername(username)
 
-Collection.validatePassword(password)
+Collection.Utils.validatePassword(password)
 
-Collection.validateAlphaNumericOnly(name, value)
+Collection.Utils.validateAlphaNumericOnly(name, value)
+
+Collection.Utils.validateAlphaNumericOnlyNoSpaces(name, value)
 
 ````
