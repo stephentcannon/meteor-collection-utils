@@ -114,4 +114,13 @@ Meteor.Collection.prototype.Utils = {
     }
   },
   
+  validateAlphaNumericDashUnderscoreOnlyNoSpaces: function(name, value){
+    //console.log(value);
+    var ck_alpha_numeric = /^[a-zA-Z0-9-_]+$/;
+    //console.log( ck_alpha_numeric.test(value) );
+    if(!ck_alpha_numeric.test(value)){
+      throw name.replace(/_/g, ' ') + ' must be alpha-numeric with no spaces.';
+    }
+  },
+  
 };
