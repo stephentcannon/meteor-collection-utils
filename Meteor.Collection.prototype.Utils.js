@@ -129,7 +129,7 @@ Meteor.Collection.prototype.Utils = {
     }
   },
   isNumeric: function(name, value){
-    if(isNaN(value)){
+    if(isNaN(value) || value == '' || value == null || value == undefined){
      throw name.replace(/_/g, ' ') + ' must be a valid number.';
     }
   }
