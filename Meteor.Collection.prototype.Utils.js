@@ -66,14 +66,18 @@ Meteor.Collection.prototype.Utils = {
     }
   },
 
-  validateEmail: function(email) {
+  validateEmail: function(email, name) {
     // use either of these
     //var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
     //   /^([a-zA-Z0-9_.-\+])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/
     //   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\  ".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA  -Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\  ".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA  -Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!re.test(email)){
-      throw 'Please enter a valid <b>email</b> address.';
+      if(name){
+        throw name.replace(/_/g, ' ') + ' must be a valid email address.';
+      } else {
+        throw 'Please enter a valid <b>email</b> address.';
+      }
     }
   },
 
