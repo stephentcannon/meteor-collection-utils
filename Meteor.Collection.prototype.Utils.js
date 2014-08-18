@@ -67,8 +67,6 @@ Meteor.Collection.prototype.Utils = {
   },
 
   validateEmail: function(email, name) {
-    console.log('validateEmail: ' + email);
-    console.log('validateEmail: ' + name)
     // use either of these
     //var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
     //   /^([a-zA-Z0-9_.-\+])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/
