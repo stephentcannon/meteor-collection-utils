@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "meteor-collection-utils": {
+        "path": "."
+      }
+    },
+    "packages": {
+      "meteor-collection-utils": {
+        "path": "."
+      }
+    }
+  }
+}
