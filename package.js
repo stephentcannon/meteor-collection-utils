@@ -1,7 +1,7 @@
 Package.describe({
   summary: "A collection of utilities added to the Meteor.Collection.prototype",
   // Version number.
-  version: "0.1.5",
+  version: "0.1.6",
   // Optional.  Default is package directory name.
   name: "steeve:meteor-collection-utils",
   // Optional github URL to your source repository.
@@ -9,5 +9,5 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-  api.addFiles('Meteor.Collection.prototype.Utils.js', ['client', 'server']);
+  api.addFiles('Mongo.Collection.prototype.Utils.js', ['client', 'server']);
 });

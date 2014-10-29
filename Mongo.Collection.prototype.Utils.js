@@ -1,4 +1,4 @@
-Meteor.Collection.prototype.Utils = {
+Mongo.Collection.prototype.Utils = {
 
   // examples of using the date validators on a birthday
   // if(params.birthdate){
