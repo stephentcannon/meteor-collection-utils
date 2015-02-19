@@ -1,7 +1,7 @@
 Package.describe({
   summary: "A collection of utilities added to the Meteor.Collection.prototype",
   // Version number.
-  version: "0.1.9",
+  version: "0.2.0",
   // Optional.  Default is package directory name.
   name: "steeve:meteor-collection-utils",
   // Optional github URL to your source repository.

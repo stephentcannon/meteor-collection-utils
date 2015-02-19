@@ -27,7 +27,8 @@ Mongo.Collection.prototype.Utils = {
 
       return this.isDate(obj) && !isNaN(obj.getTime());
   },
-
+  isInt: function(n) { return parseInt(n) === n },
+  
   validateParams: function(params) {
     for (var key in params) {
       value = params[key];
